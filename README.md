@@ -1,7 +1,5 @@
 # Customer Platform Choice Prediction
 
-**Python | PyTorch | Multiclass Classification**
-
 ## Overview
 
 A shared-encoder neural network for predicting customers’ choice between three online shopping platforms based on **delivery time, cost, customer group, and membership status**. The analysis uses **7,000 choice scenarios**, with the task formulated as three-class classification.
@@ -17,22 +15,3 @@ A shared-encoder neural network for predicting customers’ choice between three
 ## Results
 
 The original project reported a **66.9% in-sample accuracy** for the logistic regression benchmark and approximately **70% validation accuracy** for the shared-encoder network. The notebook computes comparable validation and held-out test metrics for both models using a consistent data split.
-
-The architecture captures nonlinear cost–delivery trade-offs while using the same scoring function for all three alternatives. Reported performance depends on the data split and model configuration.
-
-## Repository Contents
-
-- `platform_choice_prediction.ipynb` — Data exploration, preprocessing, models, tuning, and evaluation
-- `report.pdf` — Research methodology, original model results, and interpretation
-- `requirements.txt` — Python dependencies
-
-## Run the Analysis
-
-```bash
-pip install -r requirements.txt
-jupyter notebook platform_choice_prediction.ipynb
-```
-
-Run the notebook cells in order. It reads `training_data.csv` from the repository directory if present, or downloads the dataset from the [original project data source](https://github.com/ecpm0/colab-files/blob/main/training_data.csv). Internet access is needed on first use when the CSV is not stored locally.
-
-**Contributors:** Samuel Kalisch, Alice Finotti, Esteban Cantu, Lucia Bonnin, Ludovico Panariello.
